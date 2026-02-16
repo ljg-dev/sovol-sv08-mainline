@@ -31,3 +31,8 @@ This repository is a personal log of how I mainlined Klipper on my Sovol SV08. I
 
 ## Notes
 - This repository exists as a reference for a more up-to-date OS install flow and my own notes. Please rely on Rappetor's README for requirements and the broader guide.
+
+## Why a Newer OS
+- Security updates and long-term maintenance matter on networked devices
+- Debian Bullseye is end-of-life, so it no longer receives updates
+- Newer Klipper versions expect updated dependencies (for example, newer Python packages)
