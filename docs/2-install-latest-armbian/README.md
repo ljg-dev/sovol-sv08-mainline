@@ -33,7 +33,7 @@ It will start downloading and writing (to allow writing to the disk you might be
 ![image.png](./img/7.png)
 
 
-3. On the eMMC, edit `/boot/armbianEnv.txt` and set it to:
+3. On the eMMC, edit `/boot/armbianEnv.txt` and set it to (keep a copy of the original file first):
 ```bash
 verbosity=1
 bootlogo=false
