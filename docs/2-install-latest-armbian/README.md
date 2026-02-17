@@ -52,7 +52,7 @@ In your file this line already has the correct UUID for your eMMC. Keep that val
 
 4. Fix the partition size on the eMMC: `sudo fdisk /dev/<device>` then `e`, `2`, `<enter>`, `w`
 
-5. Insert the eMMC back into the printer, connect a keyboard and display to the HDMI port, and turn it on. You'll be prompted to create the root password, then a local user, set up locale, and finally connect to Wi-Fi
+5. Insert the eMMC back into the printer, connect a keyboard and display to the HDMI port, and turn it on. You'll first be prompted to log in (default user is `root`, password `1234`). Then you'll be prompted to create the root password, a local user, set up locale, and finally connect to Wi-Fi
 
 6. From here you can then connect through SSH using the user/password you just created and the LAN IP address of the printer (you can see it after logging in)
 
