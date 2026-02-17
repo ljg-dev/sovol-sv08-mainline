@@ -62,21 +62,22 @@ In your file this line already has the correct UUID for your eMMC. Keep that val
 ```bash
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 ```
-8. Install Git
+
+8. Mask networkd to avoid boot delays (see [this issue](https://github.com/Rappetor/Sovol-SV08-Mainline/issues/229#issuecomment-3765616568))
+```bash
+systemctl disable systemd-networkd-wait-online.service
+systemctl mask systemd-networkd-wait-online.service  
+```
+
+9. Install Git
 ```bash
 sudo apt install git python3-pip -y
 ```
 
-9. Clone KIAUH
+10. Clone KIAUH
 ```bash
 git clone https://github.com/dw-0/kiauh.git
 ./kiauh/kiauh.sh
-```
-
-10. Mask networkd to avoid boot delays (see [this issue](https://github.com/Rappetor/Sovol-SV08-Mainline/issues/229#issuecomment-3765616568))
-```bash
-systemctl disable systemd-networkd-wait-online.service
-systemctl mask systemd-networkd-wait-online.service  
 ```
 
 11. From this point on, you can follow step 4 of the [Rappetor guide](https://github.com/Rappetor/Sovol-SV08-Mainline?tab=readme-ov-file#step-4---install-mainline-klipper)
