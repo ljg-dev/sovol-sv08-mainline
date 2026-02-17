@@ -73,4 +73,10 @@ git clone https://github.com/dw-0/kiauh.git
 ./kiauh/kiauh.sh
 ```
 
-10. From this point on, you can follow step 4 of the [Rappetor guide](https://github.com/Rappetor/Sovol-SV08-Mainline?tab=readme-ov-file#step-4---install-mainline-klipper)
+10. Mask networkd to avoid boot delays (see [this issue](https://github.com/Rappetor/Sovol-SV08-Mainline/issues/229#issuecomment-3765616568))
+```bash
+systemctl disable systemd-networkd-wait-online.service
+systemctl mask systemd-networkd-wait-online.service  
+```
+
+11. From this point on, you can follow step 4 of the [Rappetor guide](https://github.com/Rappetor/Sovol-SV08-Mainline?tab=readme-ov-file#step-4---install-mainline-klipper)
